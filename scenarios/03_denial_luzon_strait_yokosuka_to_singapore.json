@@ -1,0 +1,21 @@
+{
+  "id": "S03",
+  "name": "Yokosuka to Singapore, Luzon Strait denied",
+  "purpose": "A move from Japan down the first island chain into the South China Sea. With no areas, the best route runs east of Taiwan and through the Luzon Strait. An area of denial over the whole Luzon Strait (the Bashi, Balintang and Babuyan channels) must push the route west of Taiwan, through the Taiwan Strait, for a small extra distance.",
+  "from": "Yokosuka Ko",
+  "to": "WPI-50000",
+  "k": 3,
+  "method": "distinct",
+  "areas": [
+    {"type": "polygon", "points": [[119.8, 18.6], [123.0, 18.6], [123.0, 22.0], [119.8, 22.0]]}
+  ],
+  "expect": {
+    "route_found": true,
+    "routes_at_least": 3,
+    "affected": true,
+    "best_length_nm": {"min": 2900, "max": 3100},
+    "best_avoids": ["Luzon Strait"],
+    "best_passes": ["Taiwan Strait"],
+    "extra_nm": {"min": 0, "max": 100}
+  }
+}

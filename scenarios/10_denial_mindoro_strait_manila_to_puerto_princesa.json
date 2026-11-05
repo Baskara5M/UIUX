@@ -1,0 +1,19 @@
+{
+  "id": "S10",
+  "name": "Manila to Puerto Princesa, Mindoro Strait denied",
+  "purpose": "A short move inside the Philippines, from Manila to Palawan. With no areas, the best route goes south through the Mindoro Strait, 407 nm. A 60 nm area of denial over the Mindoro Strait sends the route east of Mindoro, through the Tablas Strait and south across the Sulu Sea, about 265 nm longer. A move this short is changed a great deal by a small area. The Mindoro and Tablas Straits are not tagged as passages in the data, so the check is on length.",
+  "from": "Manila",
+  "to": "Puerto Princesa",
+  "k": 3,
+  "method": "distinct",
+  "areas": [
+    {"type": "circle", "center": [120.6, 12.6], "radius_nm": 60}
+  ],
+  "expect": {
+    "route_found": true,
+    "routes_at_least": 3,
+    "affected": true,
+    "best_length_nm": {"min": 620, "max": 720},
+    "extra_nm": {"min": 200, "max": 320}
+  }
+}

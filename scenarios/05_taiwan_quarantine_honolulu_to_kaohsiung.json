@@ -1,0 +1,16 @@
+{
+  "id": "S05",
+  "name": "Honolulu to Kao-Hsiung, Taiwan inside a denial area",
+  "purpose": "A move from Hawaii to Taiwan's main southern port, with one area of denial drawn around the whole of Taiwan. The destination is inside the area, so no route is possible, and the run must say why rather than return a route that ends inside it.",
+  "from": "Honolulu",
+  "to": "Kao-Hsiung",
+  "k": 3,
+  "method": "distinct",
+  "areas": [
+    {"type": "polygon", "points": [[119.0, 21.6], [122.6, 21.6], [122.6, 25.8], [119.0, 25.8]]}
+  ],
+  "expect": {
+    "route_found": false,
+    "blocked_contains": "inside a denial area"
+  }
+}

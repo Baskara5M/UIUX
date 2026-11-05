@@ -1,0 +1,21 @@
+{
+  "id": "S04",
+  "name": "Guam to Manila, Luzon and San Bernardino Straits denied",
+  "purpose": "A move from Guam in the second island chain to Manila. With no areas, the best route enters the Philippines through the San Bernardino Strait. Areas of denial over the San Bernardino Strait and the Luzon Strait close both northern ways in, so the route must go further south: in through the Surigao Strait, across the Bohol and Sulu Seas, and north through the Mindoro Strait to Manila Bay. Those straits are not tagged as passages in the data, so the check is on length and on avoiding the two closed straits.",
+  "from": "Apra Harbor",
+  "to": "Manila",
+  "k": 3,
+  "method": "distinct",
+  "areas": [
+    {"type": "circle", "center": [124.3, 12.6], "radius_nm": 150},
+    {"type": "polygon", "points": [[119.8, 18.6], [123.0, 18.6], [123.0, 22.0], [119.8, 22.0]]}
+  ],
+  "expect": {
+    "route_found": true,
+    "routes_at_least": 2,
+    "affected": true,
+    "best_length_nm": {"min": 1750, "max": 2000},
+    "best_avoids": ["San Bernardino Strait", "Luzon Strait"],
+    "extra_nm": {"min": 50, "max": 300}
+  }
+}

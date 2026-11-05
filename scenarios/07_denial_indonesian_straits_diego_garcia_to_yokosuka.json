@@ -1,0 +1,22 @@
+{
+  "id": "S07",
+  "name": "Diego Garcia to Yokosuka, Malacca, Sunda and Lombok Straits denied",
+  "purpose": "A move from the central Indian Ocean to Japan. With no areas, the best route goes through the Sunda Strait. Areas of denial over the Strait of Malacca, the Sunda Strait and the Lombok Strait close the three main ways through the Indonesian archipelago. (With only Malacca and Sunda closed, the route takes the Lombok and Makassar Straits, about 386 nm longer.) With all three closed, the route swings south past Western Australia, turns north past the eastern end of Timor, and goes up through the Molucca Sea and east of the Philippines, about 1,200 nm longer.",
+  "from": "Diego Garcia",
+  "to": "Yokosuka Ko",
+  "k": 3,
+  "method": "distinct",
+  "areas": [
+    {"type": "circle", "center": [101.0, 2.6], "radius_nm": 120},
+    {"type": "circle", "center": [105.8, -6.0], "radius_nm": 60},
+    {"type": "circle", "center": [115.75, -8.75], "radius_nm": 40}
+  ],
+  "expect": {
+    "route_found": true,
+    "routes_at_least": 2,
+    "affected": true,
+    "best_length_nm": {"min": 6400, "max": 6750},
+    "best_avoids": ["Strait of Malacca", "Sunda Strait", "Lombok Strait"],
+    "extra_nm": {"min": 1000, "max": 1400}
+  }
+}

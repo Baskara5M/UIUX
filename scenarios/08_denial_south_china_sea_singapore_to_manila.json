@@ -1,0 +1,20 @@
+{
+  "id": "S08",
+  "name": "Singapore to Manila, central South China Sea denied",
+  "purpose": "A move from Singapore to Manila. With no areas, the best route runs straight across the South China Sea. A polygon over the central South China Sea, from off Vietnam to the coast of Palawan and Luzon, closes that water, so the route goes around Borneo and up through the Makassar Strait into the Philippines from the south, about 800 nm longer.",
+  "from": "WPI-50000",
+  "to": "Manila",
+  "k": 3,
+  "method": "distinct",
+  "areas": [
+    {"type": "polygon", "points": [[111.0, 6.0], [118.0, 6.0], [120.0, 12.0], [119.5, 17.0], [113.0, 17.0], [111.0, 12.0]]}
+  ],
+  "expect": {
+    "route_found": true,
+    "routes_at_least": 3,
+    "affected": true,
+    "best_length_nm": {"min": 2050, "max": 2250},
+    "best_passes": ["Makassar Strait"],
+    "extra_nm": {"min": 700, "max": 900}
+  }
+}

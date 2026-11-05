@@ -1,0 +1,294 @@
+{
+  "run": {
+    "started": "2026-10-29 15:04:38",
+    "code": "25ced0c + local changes",
+    "data": "neo4j-datamodel (MARNET 100 km)",
+    "passed": 2,
+    "failed": 0
+  },
+  "scenarios": [
+    {
+      "id": "S01",
+      "name": "San Diego to Subic Bay, open seas",
+      "purpose": "Basic logic. A move from the US West Coast to the first island chain with nothing closed. The best route should cross the Pacific and enter the Philippines through the San Bernardino Strait.",
+      "file": "scenarios/01_basic_san_diego_to_subic_bay.json",
+      "from": {
+        "id": "WPI-16010",
+        "name": "San Diego",
+        "country": "United States"
+      },
+      "to": {
+        "id": "WPI-58395",
+        "name": "Subic Bay",
+        "country": "Philippines"
+      },
+      "k": 3,
+      "method": "distinct",
+      "areas": [],
+      "passed": true,
+      "checks": [
+        {
+          "check": "A route is found",
+          "expected": "yes",
+          "actual": "found",
+          "passed": true
+        },
+        {
+          "check": "Enough alternative routes",
+          "expected": ">= 3",
+          "actual": 3,
+          "passed": true
+        },
+        {
+          "check": "Best route length",
+          "expected": "6,600 to 6,900 nm",
+          "actual": "6,733 nm",
+          "passed": true
+        },
+        {
+          "check": "Best route goes through San Bernardino Strait",
+          "expected": "yes",
+          "actual": "San Bernardino Strait",
+          "passed": true
+        },
+        {
+          "check": "Every route starts at the origin and ends at the destination",
+          "expected": "within 1 nm",
+          "actual": "0.00 nm off at worst",
+          "passed": true
+        },
+        {
+          "check": "No route is shorter than the great-circle distance",
+          "expected": ">= 6,450 nm",
+          "actual": "6,733 nm shortest",
+          "passed": true
+        },
+        {
+          "check": "Routes are ranked shortest first",
+          "expected": "lengths never decrease",
+          "actual": "6,733, 6,987, 7,016",
+          "passed": true
+        },
+        {
+          "check": "Each route's drawn line matches its reported length",
+          "expected": "within 2%",
+          "actual": "0.00% at worst",
+          "passed": true
+        },
+        {
+          "check": "No route is listed twice",
+          "expected": "3 different routes",
+          "actual": "3 different",
+          "passed": true
+        }
+      ],
+      "original": {
+        "length_nm": 6733.1,
+        "passages": [
+          "San Bernardino Strait"
+        ],
+        "hops": 40
+      },
+      "routes": [
+        {
+          "rank": 1,
+          "length_nm": 6733.1,
+          "passages": [
+            "San Bernardino Strait"
+          ],
+          "hops": 40
+        },
+        {
+          "rank": 2,
+          "length_nm": 6987.0,
+          "passages": [
+            "San Bernardino Strait"
+          ],
+          "hops": 35
+        },
+        {
+          "rank": 3,
+          "length_nm": 7015.9,
+          "passages": [
+            "Korea Strait",
+            "Taiwan Strait"
+          ],
+          "hops": 51
+        }
+      ],
+      "affected": false,
+      "closed_links": 0,
+      "extra_nm": null,
+      "extra_days_at_18kt": null,
+      "blocked": null,
+      "seconds": 0.039,
+      "snapshots": [
+        {
+          "label": "Whole route",
+          "svg": "snapshots/01_basic_san_diego_to_subic_bay.svg",
+          "png": "snapshots/01_basic_san_diego_to_subic_bay.png"
+        },
+        {
+          "label": "Close-up of the destination",
+          "svg": "snapshots/01_basic_san_diego_to_subic_bay_closeup.svg",
+          "png": "snapshots/01_basic_san_diego_to_subic_bay_closeup.png"
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "name": "San Diego to Subic Bay, San Bernardino Strait denied",
+      "purpose": "The same move as S01, with a 150 nm area of denial over the San Bernardino Strait. The route must be pushed off its original track and find the next best way in, through the Luzon Strait, for a small extra distance.",
+      "file": "scenarios/02_denial_san_bernardino_strait.json",
+      "from": {
+        "id": "WPI-16010",
+        "name": "San Diego",
+        "country": "United States"
+      },
+      "to": {
+        "id": "WPI-58395",
+        "name": "Subic Bay",
+        "country": "Philippines"
+      },
+      "k": 3,
+      "method": "distinct",
+      "areas": [
+        {
+          "type": "circle",
+          "center": [
+            124.3,
+            12.6
+          ],
+          "radius_nm": 150
+        }
+      ],
+      "passed": true,
+      "checks": [
+        {
+          "check": "A route is found",
+          "expected": "yes",
+          "actual": "found",
+          "passed": true
+        },
+        {
+          "check": "Enough alternative routes",
+          "expected": ">= 2",
+          "actual": 3,
+          "passed": true
+        },
+        {
+          "check": "Best route goes through Luzon Strait",
+          "expected": "yes",
+          "actual": "Luzon Strait",
+          "passed": true
+        },
+        {
+          "check": "Best route avoids San Bernardino Strait",
+          "expected": "yes",
+          "actual": "Luzon Strait",
+          "passed": true
+        },
+        {
+          "check": "The areas cut the original route",
+          "expected": "yes",
+          "actual": "yes",
+          "passed": true
+        },
+        {
+          "check": "Extra distance caused by the areas",
+          "expected": "0 to 300 nm",
+          "actual": "35 nm",
+          "passed": true
+        },
+        {
+          "check": "Every route starts at the origin and ends at the destination",
+          "expected": "within 1 nm",
+          "actual": "0.00 nm off at worst",
+          "passed": true
+        },
+        {
+          "check": "No route is shorter than the great-circle distance",
+          "expected": ">= 6,450 nm",
+          "actual": "6,768 nm shortest",
+          "passed": true
+        },
+        {
+          "check": "Routes are ranked shortest first",
+          "expected": "lengths never decrease",
+          "actual": "6,768, 7,016, 7,022",
+          "passed": true
+        },
+        {
+          "check": "Each route's drawn line matches its reported length",
+          "expected": "within 2%",
+          "actual": "0.00% at worst",
+          "passed": true
+        },
+        {
+          "check": "No route is listed twice",
+          "expected": "3 different routes",
+          "actual": "3 different",
+          "passed": true
+        },
+        {
+          "check": "No route enters an area of denial",
+          "expected": "none, checked every 2 nm",
+          "actual": "none enter",
+          "passed": true
+        }
+      ],
+      "original": {
+        "length_nm": 6733.1,
+        "passages": [
+          "San Bernardino Strait"
+        ],
+        "hops": 40
+      },
+      "routes": [
+        {
+          "rank": 1,
+          "length_nm": 6768.4,
+          "passages": [
+            "Luzon Strait"
+          ],
+          "hops": 43
+        },
+        {
+          "rank": 2,
+          "length_nm": 7015.9,
+          "passages": [
+            "Korea Strait",
+            "Taiwan Strait"
+          ],
+          "hops": 51
+        },
+        {
+          "rank": 3,
+          "length_nm": 7022.3,
+          "passages": [
+            "Luzon Strait"
+          ],
+          "hops": 38
+        }
+      ],
+      "affected": true,
+      "closed_links": 87,
+      "extra_nm": 35.3,
+      "extra_days_at_18kt": 0.1,
+      "blocked": null,
+      "seconds": 0.041,
+      "snapshots": [
+        {
+          "label": "Whole route",
+          "svg": "snapshots/02_denial_san_bernardino_strait.svg",
+          "png": "snapshots/02_denial_san_bernardino_strait.png"
+        },
+        {
+          "label": "Close-up of the areas",
+          "svg": "snapshots/02_denial_san_bernardino_strait_closeup.svg",
+          "png": "snapshots/02_denial_san_bernardino_strait_closeup.png"
+        }
+      ]
+    }
+  ]
+}

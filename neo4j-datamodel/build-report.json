@@ -1,0 +1,90 @@
+{
+  "resolution": "100km",
+  "rows_written": {
+    "nodes/ports.csv": 3806,
+    "nodes/airfields.csv": 2285,
+    "nodes/runways.csv": 3640,
+    "nodes/sea_nodes.csv": 4525,
+    "nodes/passages.csv": 22,
+    "relationships/sea_segments.csv": 9686,
+    "relationships/port_to_sea_node.csv": 7612,
+    "relationships/port_to_port.csv": 2507
+  },
+  "network": {
+    "marnet_features": 9847,
+    "raw_nodes": 5241,
+    "raw_segments": 10402,
+    "dropped_duplicate_segments": 8,
+    "dead_end_segments_pruned": 172,
+    "pass_through_points_merged": 544,
+    "final_nodes": 4525,
+    "final_segments": 9686,
+    "node_reduction_vs_raw_20km_pct": 72.1,
+    "components": 1,
+    "segments_by_passage": {
+      "korea": 13,
+      "dover": 2,
+      "taiwan": 4,
+      "magellan": 7,
+      "makassar": 11,
+      "northwest": 10,
+      "malacca": 1,
+      "cape_horn": 12,
+      "northeast": 4,
+      "luzon": 8,
+      "sunda": 1,
+      "ormuz": 3,
+      "suez": 1,
+      "kiel": 1,
+      "lombok": 2,
+      "san_bernardino": 1,
+      "corinth": 1,
+      "bosporus": 1,
+      "gibraltar": 1,
+      "panama": 1,
+      "babelmandeb": 1,
+      "bering": 1
+    }
+  },
+  "ports": {
+    "total": 3806,
+    "source_data_issues": [
+      "WPI-400: 'Seydisfjordur' duplicates 'Seydhisfjordhur' (same position) -- dropped",
+      "WPI-46135: shared by 'Escravos Oil Terminal' and 'Lekki' -- second loaded as WPI-46135-OID3579"
+    ],
+    "by_access_quality": {
+      "approximate": 1877,
+      "good": 1429,
+      "poor": 500
+    },
+    "poor_access_river_ports": 177,
+    "not_reaching_open_ocean": 0,
+    "by_harbor_size": {
+      "Very Small": 2109,
+      "Small": 1021,
+      "Medium": 376,
+      "Large": 174,
+      "(blank)": 126
+    },
+    "controlling_depth_known": 3483,
+    "max_vessel_draft_known": 944
+  },
+  "airfields": {
+    "total": 2285,
+    "by_type": {
+      "large_airport": 1014,
+      "medium_airport": 1271
+    },
+    "runways": 3640
+  },
+  "settings": {
+    "MIN_PAVED_RUNWAY_FT": 8000,
+    "AIRFIELD_TYPES": [
+      "large_airport",
+      "medium_airport"
+    ],
+    "ACCESS_GOOD_NM": 10.0,
+    "ACCESS_POOR_NM": 50.0,
+    "NODE_KEY_TOLERANCE_DEG": 1e-05
+  }
+}

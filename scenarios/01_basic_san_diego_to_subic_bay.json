@@ -1,0 +1,16 @@
+{
+  "id": "S01",
+  "name": "San Diego to Subic Bay, open seas",
+  "purpose": "Basic logic. A move from the US West Coast to the first island chain with nothing closed. The best route should cross the Pacific and enter the Philippines through the San Bernardino Strait.",
+  "from": "San Diego",
+  "to": "Subic Bay",
+  "k": 3,
+  "method": "distinct",
+  "areas": [],
+  "expect": {
+    "route_found": true,
+    "routes_at_least": 3,
+    "best_length_nm": {"min": 6600, "max": 6900},
+    "best_passes": ["San Bernardino Strait"]
+  }
+}
