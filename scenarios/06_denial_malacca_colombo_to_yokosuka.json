@@ -1,0 +1,21 @@
+{
+  "id": "S06",
+  "name": "Colombo to Yokosuka, Strait of Malacca denied",
+  "purpose": "A move from the Indian Ocean to Japan. With no areas, the best route goes through the Strait of Malacca and the Luzon Strait. A 120 nm area of denial over the Strait of Malacca sends the route south of Sumatra and through the Sunda Strait, the nearest way past the Indonesian archipelago.",
+  "from": "Colombo",
+  "to": "Yokosuka Ko",
+  "k": 3,
+  "method": "distinct",
+  "areas": [
+    {"type": "circle", "center": [101.0, 2.6], "radius_nm": 120}
+  ],
+  "expect": {
+    "route_found": true,
+    "routes_at_least": 3,
+    "affected": true,
+    "best_length_nm": {"min": 5100, "max": 5300},
+    "best_passes": ["Sunda Strait"],
+    "best_avoids": ["Strait of Malacca"],
+    "extra_nm": {"min": 500, "max": 700}
+  }
+}

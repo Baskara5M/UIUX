@@ -1,0 +1,23 @@
+passage_id,name,kind,tag_method,max_draft_m,bbox,segment_count
+suez,Suez Canal,canal,native,20.1,,1
+panama,Panama Canal,canal,native,15.2,,1
+kiel,Kiel Canal,canal,native,7.0,,1
+corinth,Corinth Canal,canal,native,7.3,,1
+gibraltar,Strait of Gibraltar,strait,native,,,1
+babelmandeb,Bab-el-Mandeb,strait,native,,,1
+malacca,Strait of Malacca,strait,native,,,1
+dover,Strait of Dover,strait,native,,,2
+bering,Bering Strait,strait,native,,,1
+magellan,Strait of Magellan,strait,native,,,7
+northwest,Northwest Passage,arctic route,native,,,10
+northeast,Northeast Passage,arctic route,native,,,4
+bosporus,Bosporus,strait,bbox_library,,28.9;40.95;29.25;41.35,1
+ormuz,Strait of Hormuz,strait,bbox_library,,55.9;26.0;57.0;27.2,3
+sunda,Sunda Strait,strait,bbox_library,,105.4;-6.7;106.3;-5.7,1
+cape_horn,Cape Horn,route,bbox_library,,-68.0;-57.5;-65.0;-55.5,12
+luzon,Luzon Strait,strait,bbox_falcon,,120.0;18.8;122.5;22.0,8
+san_bernardino,San Bernardino Strait,strait,bbox_falcon,,124.0;12.3;124.6;12.8,1
+taiwan,Taiwan Strait,strait,bbox_falcon,,117.5;22.5;120.5;25.5,4
+korea,Korea Strait,strait,bbox_falcon,,128.3;33.6;130.4;35.3,13
+lombok,Lombok Strait,strait,bbox_falcon,,115.55;-9.0;116.0;-8.2,2
+makassar,Makassar Strait,strait,bbox_falcon,,116.8;-4.0;119.5;1.5,11

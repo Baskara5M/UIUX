@@ -1,0 +1,13 @@
+{"airports": [{"id": "GR-0109", "name": "(*)Kasteli Hellenic Air Force Base", "code": "LGTL", "country": "GR", "lat": 35.191341, "lon": 25.326588},
+ {"id": "TTCP", "name": "A.N.R. Robinson International Airport", "code": "TTCP", "country": "TT", "lat": 11.149571, "lon": -60.831298},
+ {"id": "EKYT", "name": "Aalborg Airport", "code": "EKYT", "country": "DK", "lat": 57.094763, "lon": 9.84993},
+ {"id": "EKAH", "name": "Aarhus Airport", "code": "EKAH", "country": "DK", "lat": 56.303331, "lon": 10.618286},
+ {"id": "HADR", "name": "Aba Tenna Dejazmach Yilma International Airport", "code": "HADR", "country": "ET", "lat": 9.623549, "lon": 41.855027},
+ {"id": "OIAA", "name": "Abadan Ayatollah Jami International Airport", "code": "OIAA", "country": "IR", "lat": 30.367887, "lon": 48.230075},
+ {"id": "UNAA", "name": "Abakan International Airport", "code": "UNAA", "country": "RU", "lat": 53.740002, "lon": 91.385002},
+ {"id": "CYXX", "name": "Abbotsford International Airport", "code": "CYXX", "country": "CA", "lat": 49.025299, "lon": -122.361},
+ {"id": "DAOB", "name": "Abdelhafid Boussouf Bou Chekif Airport", "code": "DAOB", "country": "DZ", "lat": 35.341099, "lon": 1.46315},
+ {"id": "WARA", "name": "Abdul Rachman Saleh Airport", "code": "WARA", "country": "ID", "lat": -7.929099, "lon": 112.714233},
+ {"id": "FTTC", "name": "Abeche Airport", "code": "FTTC", "country": "TD", "lat": 13.847, "lon": 20.844299},
+ {"id": "EYSA", "name": "Šiauliai International Airport", "code": "EYSA", "country": "LT", "lat": 55.893902, "lon": 23.395}],
+"nodes": 30130, "records": 70291}
