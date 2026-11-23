@@ -1,0 +1,20 @@
+{
+  "id": "S02",
+  "name": "San Diego to Subic Bay, San Bernardino Strait denied",
+  "purpose": "The same move as S01, with a 150 nm area of denial over the San Bernardino Strait. The route must be pushed off its original track and find the next best way in, through the Luzon Strait, for a small extra distance.",
+  "from": "San Diego",
+  "to": "Subic Bay",
+  "k": 3,
+  "method": "distinct",
+  "areas": [
+    {"type": "circle", "center": [124.3, 12.6], "radius_nm": 150}
+  ],
+  "expect": {
+    "route_found": true,
+    "routes_at_least": 2,
+    "affected": true,
+    "best_avoids": ["San Bernardino Strait"],
+    "best_passes": ["Luzon Strait"],
+    "extra_nm": {"min": 0, "max": 300}
+  }
+}
