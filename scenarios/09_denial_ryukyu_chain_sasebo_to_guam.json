@@ -1,0 +1,19 @@
+{
+  "id": "S09",
+  "name": "Sasebo to Guam, waters from Taiwan to southern Kyushu denied",
+  "purpose": "A move from western Kyushu to Guam. With no areas, the best route leaves the East China Sea just south of Kyushu. A polygon over the Ryukyu Islands and the waters south of Kyushu, from Taiwan's north-east coast to about 31 degrees north, closes every gap in that island chain, so the route goes north around Kyushu, through the Korea Strait, and down Kyushu's east coast into the Pacific, about 115 nm longer.",
+  "from": "Sasebo",
+  "to": "Apra Harbor",
+  "k": 3,
+  "method": "distinct",
+  "areas": [
+    {"type": "polygon", "points": [[122.5, 23.8], [131.0, 23.8], [131.0, 31.0], [122.5, 31.0]]}
+  ],
+  "expect": {
+    "route_found": true,
+    "routes_at_least": 3,
+    "affected": true,
+    "best_length_nm": {"min": 1600, "max": 1720},
+    "extra_nm": {"min": 80, "max": 160}
+  }
+}
